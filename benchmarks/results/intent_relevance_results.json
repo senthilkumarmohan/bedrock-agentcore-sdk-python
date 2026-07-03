@@ -1,0 +1,1394 @@
+[
+  {
+    "test_name": "Simple: weather query",
+    "test_type": "simple",
+    "approach": "raw_message",
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "text": "What is the weather in Seattle?"
+          }
+        ]
+      }
+    ],
+    "search_query": "What is the weather in Seattle?",
+    "expected_categories": [
+      "weather"
+    ],
+    "tools_returned": [
+      "bench-relevance-100t-1783084301-target___weather_tool_4",
+      "bench-relevance-100t-1783084301-target___weather_tool_3",
+      "bench-relevance-100t-1783084301-target___weather_tool_1",
+      "bench-relevance-100t-1783084301-target___weather_tool_7",
+      "bench-relevance-100t-1783084301-target___calendar_tool_4",
+      "bench-relevance-100t-1783084301-target___weather_tool_6",
+      "bench-relevance-100t-1783084301-target___weather_tool",
+      "bench-relevance-100t-1783084301-target___calendar_tool",
+      "bench-relevance-100t-1783084301-target___calendar_tool_7",
+      "bench-relevance-100t-1783084301-target___calendar_tool_2"
+    ],
+    "matching_tools": 6,
+    "total_tools_returned": 10,
+    "precision": 0.6,
+    "hit": true
+  },
+  {
+    "test_name": "Simple: weather query",
+    "test_type": "simple",
+    "approach": "llm_intent",
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "text": "What is the weather in Seattle?"
+          }
+        ]
+      }
+    ],
+    "search_query": "The user is asking for current weather information for a specific location.",
+    "expected_categories": [
+      "weather"
+    ],
+    "tools_returned": [
+      "bench-relevance-100t-1783084301-target___weather_tool",
+      "bench-relevance-100t-1783084301-target___weather_tool_1",
+      "bench-relevance-100t-1783084301-target___weather_tool_3",
+      "bench-relevance-100t-1783084301-target___weather_tool_6",
+      "bench-relevance-100t-1783084301-target___weather_tool_4",
+      "bench-relevance-100t-1783084301-target___weather_tool_8",
+      "bench-relevance-100t-1783084301-target___weather_tool_7",
+      "bench-relevance-100t-1783084301-target___weather_tool_9",
+      "bench-relevance-100t-1783084301-target___weather_tool_2",
+      "bench-relevance-100t-1783084301-target___weather_tool_5"
+    ],
+    "matching_tools": 10,
+    "total_tools_returned": 10,
+    "precision": 1.0,
+    "hit": true
+  },
+  {
+    "test_name": "Simple: weather query",
+    "test_type": "simple",
+    "approach": "regex_intent",
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "text": "What is the weather in Seattle?"
+          }
+        ]
+      }
+    ],
+    "search_query": "weather seattle",
+    "expected_categories": [
+      "weather"
+    ],
+    "tools_returned": [
+      "bench-relevance-100t-1783084301-target___calendar_tool_4",
+      "bench-relevance-100t-1783084301-target___weather_tool_4",
+      "bench-relevance-100t-1783084301-target___calendar_tool_7",
+      "bench-relevance-100t-1783084301-target___calendar_tool_2",
+      "bench-relevance-100t-1783084301-target___calendar_tool_6",
+      "bench-relevance-100t-1783084301-target___weather_tool_7",
+      "bench-relevance-100t-1783084301-target___calendar_tool_1",
+      "bench-relevance-100t-1783084301-target___calendar_tool",
+      "bench-relevance-100t-1783084301-target___weather_tool_6",
+      "bench-relevance-100t-1783084301-target___weather_tool_3"
+    ],
+    "matching_tools": 4,
+    "total_tools_returned": 10,
+    "precision": 0.4,
+    "hit": true
+  },
+  {
+    "test_name": "Simple: send email",
+    "test_type": "simple",
+    "approach": "raw_message",
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "text": "Send an email to john@example.com about the project update"
+          }
+        ]
+      }
+    ],
+    "search_query": "Send an email to john@example.com about the project update",
+    "expected_categories": [
+      "email"
+    ],
+    "tools_returned": [
+      "bench-relevance-100t-1783084301-target___email_tool",
+      "bench-relevance-100t-1783084301-target___email_tool_1",
+      "bench-relevance-100t-1783084301-target___email_tool_4",
+      "bench-relevance-100t-1783084301-target___email_tool_5",
+      "bench-relevance-100t-1783084301-target___email_tool_9",
+      "bench-relevance-100t-1783084301-target___email_tool_2",
+      "bench-relevance-100t-1783084301-target___email_tool_3",
+      "bench-relevance-100t-1783084301-target___email_tool_6",
+      "bench-relevance-100t-1783084301-target___email_tool_7",
+      "bench-relevance-100t-1783084301-target___email_tool_8"
+    ],
+    "matching_tools": 10,
+    "total_tools_returned": 10,
+    "precision": 1.0,
+    "hit": true
+  },
+  {
+    "test_name": "Simple: send email",
+    "test_type": "simple",
+    "approach": "llm_intent",
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "text": "Send an email to john@example.com about the project update"
+          }
+        ]
+      }
+    ],
+    "search_query": "User wants to compose and send an email to a specific recipient about a project update.",
+    "expected_categories": [
+      "email"
+    ],
+    "tools_returned": [
+      "bench-relevance-100t-1783084301-target___email_tool_2",
+      "bench-relevance-100t-1783084301-target___email_tool_1",
+      "bench-relevance-100t-1783084301-target___email_tool",
+      "bench-relevance-100t-1783084301-target___email_tool_4",
+      "bench-relevance-100t-1783084301-target___email_tool_3",
+      "bench-relevance-100t-1783084301-target___email_tool_9",
+      "bench-relevance-100t-1783084301-target___email_tool_5",
+      "bench-relevance-100t-1783084301-target___email_tool_8",
+      "bench-relevance-100t-1783084301-target___email_tool_6",
+      "bench-relevance-100t-1783084301-target___email_tool_7"
+    ],
+    "matching_tools": 10,
+    "total_tools_returned": 10,
+    "precision": 1.0,
+    "hit": true
+  },
+  {
+    "test_name": "Simple: send email",
+    "test_type": "simple",
+    "approach": "regex_intent",
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "text": "Send an email to john@example.com about the project update"
+          }
+        ]
+      }
+    ],
+    "search_query": "send email john example com",
+    "expected_categories": [
+      "email"
+    ],
+    "tools_returned": [
+      "bench-relevance-100t-1783084301-target___email_tool_1",
+      "bench-relevance-100t-1783084301-target___email_tool_7",
+      "bench-relevance-100t-1783084301-target___email_tool_2",
+      "bench-relevance-100t-1783084301-target___email_tool",
+      "bench-relevance-100t-1783084301-target___email_tool_4",
+      "bench-relevance-100t-1783084301-target___email_tool_6",
+      "bench-relevance-100t-1783084301-target___email_tool_3",
+      "bench-relevance-100t-1783084301-target___email_tool_8",
+      "bench-relevance-100t-1783084301-target___email_tool_5",
+      "bench-relevance-100t-1783084301-target___email_tool_9"
+    ],
+    "matching_tools": 10,
+    "total_tools_returned": 10,
+    "precision": 1.0,
+    "hit": true
+  },
+  {
+    "test_name": "Simple: deploy service",
+    "test_type": "simple",
+    "approach": "raw_message",
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "text": "Deploy the payment service to production"
+          }
+        ]
+      }
+    ],
+    "search_query": "Deploy the payment service to production",
+    "expected_categories": [
+      "deployment"
+    ],
+    "tools_returned": [
+      "bench-relevance-100t-1783084301-target___deployment_tool",
+      "bench-relevance-100t-1783084301-target___deployment_tool_9",
+      "bench-relevance-100t-1783084301-target___deployment_tool_1",
+      "bench-relevance-100t-1783084301-target___deployment_tool_5",
+      "bench-relevance-100t-1783084301-target___deployment_tool_6",
+      "bench-relevance-100t-1783084301-target___deployment_tool_7",
+      "bench-relevance-100t-1783084301-target___deployment_tool_4",
+      "bench-relevance-100t-1783084301-target___deployment_tool_8",
+      "bench-relevance-100t-1783084301-target___deployment_tool_3",
+      "bench-relevance-100t-1783084301-target___deployment_tool_2"
+    ],
+    "matching_tools": 10,
+    "total_tools_returned": 10,
+    "precision": 1.0,
+    "hit": true
+  },
+  {
+    "test_name": "Simple: deploy service",
+    "test_type": "simple",
+    "approach": "llm_intent",
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "text": "Deploy the payment service to production"
+          }
+        ]
+      }
+    ],
+    "search_query": "User wants to deploy a payment service to a production environment.",
+    "expected_categories": [
+      "deployment"
+    ],
+    "tools_returned": [
+      "bench-relevance-100t-1783084301-target___deployment_tool",
+      "bench-relevance-100t-1783084301-target___deployment_tool_5",
+      "bench-relevance-100t-1783084301-target___deployment_tool_9",
+      "bench-relevance-100t-1783084301-target___deployment_tool_1",
+      "bench-relevance-100t-1783084301-target___deployment_tool_8",
+      "bench-relevance-100t-1783084301-target___deployment_tool_4",
+      "bench-relevance-100t-1783084301-target___deployment_tool_7",
+      "bench-relevance-100t-1783084301-target___deployment_tool_3",
+      "bench-relevance-100t-1783084301-target___deployment_tool_6",
+      "bench-relevance-100t-1783084301-target___deployment_tool_2"
+    ],
+    "matching_tools": 10,
+    "total_tools_returned": 10,
+    "precision": 1.0,
+    "hit": true
+  },
+  {
+    "test_name": "Simple: deploy service",
+    "test_type": "simple",
+    "approach": "regex_intent",
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "text": "Deploy the payment service to production"
+          }
+        ]
+      }
+    ],
+    "search_query": "deploy payment service production",
+    "expected_categories": [
+      "deployment"
+    ],
+    "tools_returned": [
+      "bench-relevance-100t-1783084301-target___deployment_tool",
+      "bench-relevance-100t-1783084301-target___deployment_tool_9",
+      "bench-relevance-100t-1783084301-target___deployment_tool_1",
+      "bench-relevance-100t-1783084301-target___deployment_tool_5",
+      "bench-relevance-100t-1783084301-target___deployment_tool_4",
+      "bench-relevance-100t-1783084301-target___deployment_tool_7",
+      "bench-relevance-100t-1783084301-target___deployment_tool_6",
+      "bench-relevance-100t-1783084301-target___deployment_tool_8",
+      "bench-relevance-100t-1783084301-target___deployment_tool_3",
+      "bench-relevance-100t-1783084301-target___deployment_tool_2"
+    ],
+    "matching_tools": 10,
+    "total_tools_returned": 10,
+    "precision": 1.0,
+    "hit": true
+  },
+  {
+    "test_name": "Multi-turn: trip planning \u2192 weather",
+    "test_type": "multi_turn",
+    "approach": "raw_message",
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "text": "I'm planning a trip to Tokyo next week"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "text": "That sounds exciting! How can I help you prepare?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "text": "What should I pack?"
+          }
+        ]
+      }
+    ],
+    "search_query": "What should I pack?",
+    "expected_categories": [
+      "weather"
+    ],
+    "tools_returned": [
+      "bench-relevance-100t-1783084301-target___security_tool_5",
+      "bench-relevance-100t-1783084301-target___file_tool_5",
+      "bench-relevance-100t-1783084301-target___file_tool_4",
+      "bench-relevance-100t-1783084301-target___file_tool_9",
+      "bench-relevance-100t-1783084301-target___file_tool_8",
+      "bench-relevance-100t-1783084301-target___file_tool",
+      "bench-relevance-100t-1783084301-target___security_tool",
+      "bench-relevance-100t-1783084301-target___security_tool_9",
+      "bench-relevance-100t-1783084301-target___email_tool_5",
+      "bench-relevance-100t-1783084301-target___weather_tool_5"
+    ],
+    "matching_tools": 1,
+    "total_tools_returned": 10,
+    "precision": 0.1,
+    "hit": true
+  },
+  {
+    "test_name": "Multi-turn: trip planning \u2192 weather",
+    "test_type": "multi_turn",
+    "approach": "llm_intent",
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "text": "I'm planning a trip to Tokyo next week"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "text": "That sounds exciting! How can I help you prepare?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "text": "What should I pack?"
+          }
+        ]
+      }
+    ],
+    "search_query": "The user is seeking packing advice for an upcoming trip to Tokyo.",
+    "expected_categories": [
+      "weather"
+    ],
+    "tools_returned": [
+      "bench-relevance-100t-1783084301-target___weather_tool",
+      "bench-relevance-100t-1783084301-target___weather_tool_5",
+      "bench-relevance-100t-1783084301-target___weather_tool_1",
+      "bench-relevance-100t-1783084301-target___weather_tool_3",
+      "bench-relevance-100t-1783084301-target___weather_tool_4",
+      "bench-relevance-100t-1783084301-target___weather_tool_2",
+      "bench-relevance-100t-1783084301-target___weather_tool_7",
+      "bench-relevance-100t-1783084301-target___weather_tool_8",
+      "bench-relevance-100t-1783084301-target___weather_tool_9",
+      "bench-relevance-100t-1783084301-target___weather_tool_6"
+    ],
+    "matching_tools": 10,
+    "total_tools_returned": 10,
+    "precision": 1.0,
+    "hit": true
+  },
+  {
+    "test_name": "Multi-turn: trip planning \u2192 weather",
+    "test_type": "multi_turn",
+    "approach": "regex_intent",
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "text": "I'm planning a trip to Tokyo next week"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "text": "That sounds exciting! How can I help you prepare?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "text": "What should I pack?"
+          }
+        ]
+      }
+    ],
+    "search_query": "pack",
+    "expected_categories": [
+      "weather"
+    ],
+    "tools_returned": [
+      "bench-relevance-100t-1783084301-target___file_tool_9",
+      "bench-relevance-100t-1783084301-target___file_tool_7",
+      "bench-relevance-100t-1783084301-target___file_tool_4",
+      "bench-relevance-100t-1783084301-target___file_tool_1",
+      "bench-relevance-100t-1783084301-target___file_tool",
+      "bench-relevance-100t-1783084301-target___file_tool_3",
+      "bench-relevance-100t-1783084301-target___file_tool_8",
+      "bench-relevance-100t-1783084301-target___file_tool_6",
+      "bench-relevance-100t-1783084301-target___file_tool_2",
+      "bench-relevance-100t-1783084301-target___email_tool_9"
+    ],
+    "matching_tools": 0,
+    "total_tools_returned": 10,
+    "precision": 0.0,
+    "hit": false
+  },
+  {
+    "test_name": "Multi-turn: project discussion \u2192 email",
+    "test_type": "multi_turn",
+    "approach": "raw_message",
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "text": "The quarterly review meeting went well yesterday"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "text": "Great to hear! What were the key outcomes?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "text": "Can you let the team know about the new deadlines?"
+          }
+        ]
+      }
+    ],
+    "search_query": "Can you let the team know about the new deadlines?",
+    "expected_categories": [
+      "email",
+      "notification"
+    ],
+    "tools_returned": [
+      "bench-relevance-100t-1783084301-target___notification_tool",
+      "bench-relevance-100t-1783084301-target___notification_tool_1",
+      "bench-relevance-100t-1783084301-target___notification_tool_9",
+      "bench-relevance-100t-1783084301-target___notification_tool_2",
+      "bench-relevance-100t-1783084301-target___notification_tool_5",
+      "bench-relevance-100t-1783084301-target___notification_tool_7",
+      "bench-relevance-100t-1783084301-target___notification_tool_6",
+      "bench-relevance-100t-1783084301-target___notification_tool_4",
+      "bench-relevance-100t-1783084301-target___notification_tool_3",
+      "bench-relevance-100t-1783084301-target___notification_tool_8"
+    ],
+    "matching_tools": 10,
+    "total_tools_returned": 10,
+    "precision": 1.0,
+    "hit": true
+  },
+  {
+    "test_name": "Multi-turn: project discussion \u2192 email",
+    "test_type": "multi_turn",
+    "approach": "llm_intent",
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "text": "The quarterly review meeting went well yesterday"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "text": "Great to hear! What were the key outcomes?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "text": "Can you let the team know about the new deadlines?"
+          }
+        ]
+      }
+    ],
+    "search_query": "The user wants to communicate updated deadlines to their team.",
+    "expected_categories": [
+      "email",
+      "notification"
+    ],
+    "tools_returned": [
+      "bench-relevance-100t-1783084301-target___notification_tool",
+      "bench-relevance-100t-1783084301-target___notification_tool_1",
+      "bench-relevance-100t-1783084301-target___notification_tool_9",
+      "bench-relevance-100t-1783084301-target___notification_tool_2",
+      "bench-relevance-100t-1783084301-target___notification_tool_3",
+      "bench-relevance-100t-1783084301-target___notification_tool_8",
+      "bench-relevance-100t-1783084301-target___notification_tool_5",
+      "bench-relevance-100t-1783084301-target___notification_tool_4",
+      "bench-relevance-100t-1783084301-target___notification_tool_7",
+      "bench-relevance-100t-1783084301-target___notification_tool_6"
+    ],
+    "matching_tools": 10,
+    "total_tools_returned": 10,
+    "precision": 1.0,
+    "hit": true
+  },
+  {
+    "test_name": "Multi-turn: project discussion \u2192 email",
+    "test_type": "multi_turn",
+    "approach": "regex_intent",
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "text": "The quarterly review meeting went well yesterday"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "text": "Great to hear! What were the key outcomes?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "text": "Can you let the team know about the new deadlines?"
+          }
+        ]
+      }
+    ],
+    "search_query": "let team know about new",
+    "expected_categories": [
+      "email",
+      "notification"
+    ],
+    "tools_returned": [
+      "bench-relevance-100t-1783084301-target___notification_tool",
+      "bench-relevance-100t-1783084301-target___notification_tool_1",
+      "bench-relevance-100t-1783084301-target___notification_tool_7",
+      "bench-relevance-100t-1783084301-target___notification_tool_9",
+      "bench-relevance-100t-1783084301-target___notification_tool_4",
+      "bench-relevance-100t-1783084301-target___notification_tool_5",
+      "bench-relevance-100t-1783084301-target___notification_tool_8",
+      "bench-relevance-100t-1783084301-target___notification_tool_6",
+      "bench-relevance-100t-1783084301-target___notification_tool_2",
+      "bench-relevance-100t-1783084301-target___notification_tool_3"
+    ],
+    "matching_tools": 10,
+    "total_tools_returned": 10,
+    "precision": 1.0,
+    "hit": true
+  },
+  {
+    "test_name": "Multi-turn: server issues \u2192 monitoring",
+    "test_type": "multi_turn",
+    "approach": "raw_message",
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "text": "Users are reporting the app is slow today"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "text": "I can help investigate. What would you like me to check?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "text": "Check if something is wrong"
+          }
+        ]
+      }
+    ],
+    "search_query": "Check if something is wrong",
+    "expected_categories": [
+      "monitoring"
+    ],
+    "tools_returned": [
+      "bench-relevance-100t-1783084301-target___monitoring_tool_1",
+      "bench-relevance-100t-1783084301-target___database_tool_1",
+      "bench-relevance-100t-1783084301-target___monitoring_tool_5",
+      "bench-relevance-100t-1783084301-target___monitoring_tool_2",
+      "bench-relevance-100t-1783084301-target___monitoring_tool",
+      "bench-relevance-100t-1783084301-target___monitoring_tool_3",
+      "bench-relevance-100t-1783084301-target___database_tool",
+      "bench-relevance-100t-1783084301-target___monitoring_tool_7",
+      "bench-relevance-100t-1783084301-target___monitoring_tool_6",
+      "bench-relevance-100t-1783084301-target___database_tool_2"
+    ],
+    "matching_tools": 7,
+    "total_tools_returned": 10,
+    "precision": 0.7,
+    "hit": true
+  },
+  {
+    "test_name": "Multi-turn: server issues \u2192 monitoring",
+    "test_type": "multi_turn",
+    "approach": "llm_intent",
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "text": "Users are reporting the app is slow today"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "text": "I can help investigate. What would you like me to check?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "text": "Check if something is wrong"
+          }
+        ]
+      }
+    ],
+    "search_query": "User wants to investigate and diagnose the cause of reported application performance degradation.",
+    "expected_categories": [
+      "monitoring"
+    ],
+    "tools_returned": [
+      "bench-relevance-100t-1783084301-target___monitoring_tool",
+      "bench-relevance-100t-1783084301-target___monitoring_tool_7",
+      "bench-relevance-100t-1783084301-target___monitoring_tool_1",
+      "bench-relevance-100t-1783084301-target___monitoring_tool_9",
+      "bench-relevance-100t-1783084301-target___monitoring_tool_8",
+      "bench-relevance-100t-1783084301-target___monitoring_tool_5",
+      "bench-relevance-100t-1783084301-target___monitoring_tool_3",
+      "bench-relevance-100t-1783084301-target___monitoring_tool_2",
+      "bench-relevance-100t-1783084301-target___monitoring_tool_6",
+      "bench-relevance-100t-1783084301-target___analytics_tool_7"
+    ],
+    "matching_tools": 9,
+    "total_tools_returned": 10,
+    "precision": 0.9,
+    "hit": true
+  },
+  {
+    "test_name": "Multi-turn: server issues \u2192 monitoring",
+    "test_type": "multi_turn",
+    "approach": "regex_intent",
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "text": "Users are reporting the app is slow today"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "text": "I can help investigate. What would you like me to check?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "text": "Check if something is wrong"
+          }
+        ]
+      }
+    ],
+    "search_query": "check something wrong",
+    "expected_categories": [
+      "monitoring"
+    ],
+    "tools_returned": [
+      "bench-relevance-100t-1783084301-target___monitoring_tool_7",
+      "bench-relevance-100t-1783084301-target___monitoring_tool_5",
+      "bench-relevance-100t-1783084301-target___monitoring_tool_1",
+      "bench-relevance-100t-1783084301-target___monitoring_tool",
+      "bench-relevance-100t-1783084301-target___monitoring_tool_2",
+      "bench-relevance-100t-1783084301-target___database_tool_1",
+      "bench-relevance-100t-1783084301-target___monitoring_tool_4",
+      "bench-relevance-100t-1783084301-target___monitoring_tool_6",
+      "bench-relevance-100t-1783084301-target___monitoring_tool_3",
+      "bench-relevance-100t-1783084301-target___database_tool"
+    ],
+    "matching_tools": 8,
+    "total_tools_returned": 10,
+    "precision": 0.8,
+    "hit": true
+  },
+  {
+    "test_name": "Multi-turn: database migration \u2192 database",
+    "test_type": "multi_turn",
+    "approach": "raw_message",
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "text": "We need to migrate the user data to the new schema"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "text": "I can help with that. What's the first step?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "text": "First, show me what we have currently"
+          }
+        ]
+      }
+    ],
+    "search_query": "First, show me what we have currently",
+    "expected_categories": [
+      "database"
+    ],
+    "tools_returned": [
+      "bench-relevance-100t-1783084301-target___monitoring_tool_3",
+      "bench-relevance-100t-1783084301-target___security_tool_8",
+      "bench-relevance-100t-1783084301-target___security_tool_1",
+      "bench-relevance-100t-1783084301-target___deployment_tool_3",
+      "bench-relevance-100t-1783084301-target___database_tool_1",
+      "bench-relevance-100t-1783084301-target___monitoring_tool_1",
+      "bench-relevance-100t-1783084301-target___deployment_tool_1",
+      "bench-relevance-100t-1783084301-target___database_tool_5",
+      "bench-relevance-100t-1783084301-target___notification_tool_1",
+      "bench-relevance-100t-1783084301-target___notification_tool_3"
+    ],
+    "matching_tools": 2,
+    "total_tools_returned": 10,
+    "precision": 0.2,
+    "hit": true
+  },
+  {
+    "test_name": "Multi-turn: database migration \u2192 database",
+    "test_type": "multi_turn",
+    "approach": "llm_intent",
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "text": "We need to migrate the user data to the new schema"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "text": "I can help with that. What's the first step?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "text": "First, show me what we have currently"
+          }
+        ]
+      }
+    ],
+    "search_query": "The user wants to view the current user data schema before migrating it to a new schema.",
+    "expected_categories": [
+      "database"
+    ],
+    "tools_returned": [
+      "bench-relevance-100t-1783084301-target___database_tool_8",
+      "bench-relevance-100t-1783084301-target___database_tool_1",
+      "bench-relevance-100t-1783084301-target___database_tool_9",
+      "bench-relevance-100t-1783084301-target___database_tool_4",
+      "bench-relevance-100t-1783084301-target___database_tool_7",
+      "bench-relevance-100t-1783084301-target___database_tool",
+      "bench-relevance-100t-1783084301-target___database_tool_6",
+      "bench-relevance-100t-1783084301-target___database_tool_3",
+      "bench-relevance-100t-1783084301-target___database_tool_5",
+      "bench-relevance-100t-1783084301-target___security_tool_8"
+    ],
+    "matching_tools": 9,
+    "total_tools_returned": 10,
+    "precision": 0.9,
+    "hit": true
+  },
+  {
+    "test_name": "Multi-turn: database migration \u2192 database",
+    "test_type": "multi_turn",
+    "approach": "regex_intent",
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "text": "We need to migrate the user data to the new schema"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "text": "I can help with that. What's the first step?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "text": "First, show me what we have currently"
+          }
+        ]
+      }
+    ],
+    "search_query": "currently",
+    "expected_categories": [
+      "database"
+    ],
+    "tools_returned": [
+      "bench-relevance-100t-1783084301-target___monitoring_tool_7",
+      "bench-relevance-100t-1783084301-target___monitoring_tool_3",
+      "bench-relevance-100t-1783084301-target___monitoring_tool_6",
+      "bench-relevance-100t-1783084301-target___monitoring_tool_4",
+      "bench-relevance-100t-1783084301-target___monitoring_tool_2",
+      "bench-relevance-100t-1783084301-target___monitoring_tool_8",
+      "bench-relevance-100t-1783084301-target___monitoring_tool_1",
+      "bench-relevance-100t-1783084301-target___weather_tool_8",
+      "bench-relevance-100t-1783084301-target___weather_tool_7",
+      "bench-relevance-100t-1783084301-target___weather_tool_3"
+    ],
+    "matching_tools": 0,
+    "total_tools_returned": 10,
+    "precision": 0.0,
+    "hit": false
+  },
+  {
+    "test_name": "Topic shift: weather \u2192 email",
+    "test_type": "topic_shift",
+    "approach": "raw_message",
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "text": "What's the weather like in London?"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "text": "It's currently 15\u00b0C and cloudy in London."
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "text": "Actually, can you send a meeting invite to the London team?"
+          }
+        ]
+      }
+    ],
+    "search_query": "Actually, can you send a meeting invite to the London team?",
+    "expected_categories": [
+      "email",
+      "calendar"
+    ],
+    "tools_returned": [
+      "bench-relevance-100t-1783084301-target___notification_tool_5",
+      "bench-relevance-100t-1783084301-target___notification_tool",
+      "bench-relevance-100t-1783084301-target___notification_tool_8",
+      "bench-relevance-100t-1783084301-target___notification_tool_1",
+      "bench-relevance-100t-1783084301-target___notification_tool_6",
+      "bench-relevance-100t-1783084301-target___notification_tool_7",
+      "bench-relevance-100t-1783084301-target___notification_tool_2",
+      "bench-relevance-100t-1783084301-target___notification_tool_9",
+      "bench-relevance-100t-1783084301-target___notification_tool_4",
+      "bench-relevance-100t-1783084301-target___calendar_tool_8"
+    ],
+    "matching_tools": 1,
+    "total_tools_returned": 10,
+    "precision": 0.1,
+    "hit": true
+  },
+  {
+    "test_name": "Topic shift: weather \u2192 email",
+    "test_type": "topic_shift",
+    "approach": "llm_intent",
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "text": "What's the weather like in London?"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "text": "It's currently 15\u00b0C and cloudy in London."
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "text": "Actually, can you send a meeting invite to the London team?"
+          }
+        ]
+      }
+    ],
+    "search_query": "The user wants to send a meeting invite to the London team.",
+    "expected_categories": [
+      "email",
+      "calendar"
+    ],
+    "tools_returned": [
+      "bench-relevance-100t-1783084301-target___notification_tool",
+      "bench-relevance-100t-1783084301-target___notification_tool_5",
+      "bench-relevance-100t-1783084301-target___notification_tool_1",
+      "bench-relevance-100t-1783084301-target___notification_tool_8",
+      "bench-relevance-100t-1783084301-target___notification_tool_7",
+      "bench-relevance-100t-1783084301-target___notification_tool_6",
+      "bench-relevance-100t-1783084301-target___notification_tool_4",
+      "bench-relevance-100t-1783084301-target___calendar_tool_8",
+      "bench-relevance-100t-1783084301-target___notification_tool_2",
+      "bench-relevance-100t-1783084301-target___calendar_tool_5"
+    ],
+    "matching_tools": 2,
+    "total_tools_returned": 10,
+    "precision": 0.2,
+    "hit": true
+  },
+  {
+    "test_name": "Topic shift: weather \u2192 email",
+    "test_type": "topic_shift",
+    "approach": "regex_intent",
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "text": "What's the weather like in London?"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "text": "It's currently 15\u00b0C and cloudy in London."
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "text": "Actually, can you send a meeting invite to the London team?"
+          }
+        ]
+      }
+    ],
+    "search_query": "send meeting invite london team",
+    "expected_categories": [
+      "email",
+      "calendar"
+    ],
+    "tools_returned": [
+      "bench-relevance-100t-1783084301-target___notification_tool",
+      "bench-relevance-100t-1783084301-target___notification_tool_5",
+      "bench-relevance-100t-1783084301-target___notification_tool_1",
+      "bench-relevance-100t-1783084301-target___notification_tool_6",
+      "bench-relevance-100t-1783084301-target___notification_tool_7",
+      "bench-relevance-100t-1783084301-target___calendar_tool_5",
+      "bench-relevance-100t-1783084301-target___calendar_tool",
+      "bench-relevance-100t-1783084301-target___notification_tool_2",
+      "bench-relevance-100t-1783084301-target___calendar_tool_7",
+      "bench-relevance-100t-1783084301-target___calendar_tool_8"
+    ],
+    "matching_tools": 4,
+    "total_tools_returned": 10,
+    "precision": 0.4,
+    "hit": true
+  },
+  {
+    "test_name": "Topic shift: analytics \u2192 security",
+    "test_type": "topic_shift",
+    "approach": "raw_message",
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "text": "Show me the revenue report for Q3"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "text": "Here's the Q3 revenue summary..."
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "text": "Wait, we had a security incident last week. Can you scan our systems?"
+          }
+        ]
+      }
+    ],
+    "search_query": "Wait, we had a security incident last week. Can you scan our systems?",
+    "expected_categories": [
+      "security"
+    ],
+    "tools_returned": [
+      "bench-relevance-100t-1783084301-target___security_tool_7",
+      "bench-relevance-100t-1783084301-target___security_tool",
+      "bench-relevance-100t-1783084301-target___security_tool_5",
+      "bench-relevance-100t-1783084301-target___security_tool_6",
+      "bench-relevance-100t-1783084301-target___security_tool_1",
+      "bench-relevance-100t-1783084301-target___security_tool_8",
+      "bench-relevance-100t-1783084301-target___security_tool_9",
+      "bench-relevance-100t-1783084301-target___security_tool_4",
+      "bench-relevance-100t-1783084301-target___security_tool_2",
+      "bench-relevance-100t-1783084301-target___security_tool_3"
+    ],
+    "matching_tools": 10,
+    "total_tools_returned": 10,
+    "precision": 1.0,
+    "hit": true
+  },
+  {
+    "test_name": "Topic shift: analytics \u2192 security",
+    "test_type": "topic_shift",
+    "approach": "llm_intent",
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "text": "Show me the revenue report for Q3"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "text": "Here's the Q3 revenue summary..."
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "text": "Wait, we had a security incident last week. Can you scan our systems?"
+          }
+        ]
+      }
+    ],
+    "search_query": "The user is requesting a security scan of their systems following a recent security incident.",
+    "expected_categories": [
+      "security"
+    ],
+    "tools_returned": [
+      "bench-relevance-100t-1783084301-target___security_tool_7",
+      "bench-relevance-100t-1783084301-target___security_tool",
+      "bench-relevance-100t-1783084301-target___security_tool_1",
+      "bench-relevance-100t-1783084301-target___security_tool_5",
+      "bench-relevance-100t-1783084301-target___security_tool_6",
+      "bench-relevance-100t-1783084301-target___security_tool_9",
+      "bench-relevance-100t-1783084301-target___security_tool_3",
+      "bench-relevance-100t-1783084301-target___security_tool_2",
+      "bench-relevance-100t-1783084301-target___security_tool_4",
+      "bench-relevance-100t-1783084301-target___security_tool_8"
+    ],
+    "matching_tools": 10,
+    "total_tools_returned": 10,
+    "precision": 1.0,
+    "hit": true
+  },
+  {
+    "test_name": "Topic shift: analytics \u2192 security",
+    "test_type": "topic_shift",
+    "approach": "regex_intent",
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "text": "Show me the revenue report for Q3"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "text": "Here's the Q3 revenue summary..."
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "text": "Wait, we had a security incident last week. Can you scan our systems?"
+          }
+        ]
+      }
+    ],
+    "search_query": "security incident last week scan",
+    "expected_categories": [
+      "security"
+    ],
+    "tools_returned": [
+      "bench-relevance-100t-1783084301-target___security_tool_7",
+      "bench-relevance-100t-1783084301-target___security_tool_8",
+      "bench-relevance-100t-1783084301-target___security_tool_6",
+      "bench-relevance-100t-1783084301-target___security_tool",
+      "bench-relevance-100t-1783084301-target___security_tool_1",
+      "bench-relevance-100t-1783084301-target___security_tool_9",
+      "bench-relevance-100t-1783084301-target___security_tool_4",
+      "bench-relevance-100t-1783084301-target___security_tool_5",
+      "bench-relevance-100t-1783084301-target___security_tool_3",
+      "bench-relevance-100t-1783084301-target___security_tool_2"
+    ],
+    "matching_tools": 10,
+    "total_tools_returned": 10,
+    "precision": 1.0,
+    "hit": true
+  },
+  {
+    "test_name": "Topic shift: deployment \u2192 monitoring",
+    "test_type": "topic_shift",
+    "approach": "raw_message",
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "text": "Deploy the new version of the auth service"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "text": "Deployed auth-service v2.3.1 to production."
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "text": "How's it looking? Any errors?"
+          }
+        ]
+      }
+    ],
+    "search_query": "How's it looking? Any errors?",
+    "expected_categories": [
+      "monitoring"
+    ],
+    "tools_returned": [
+      "bench-relevance-100t-1783084301-target___database_tool_8",
+      "bench-relevance-100t-1783084301-target___database_tool_1",
+      "bench-relevance-100t-1783084301-target___database_tool",
+      "bench-relevance-100t-1783084301-target___database_tool_4",
+      "bench-relevance-100t-1783084301-target___database_tool_5",
+      "bench-relevance-100t-1783084301-target___database_tool_7",
+      "bench-relevance-100t-1783084301-target___database_tool_6",
+      "bench-relevance-100t-1783084301-target___database_tool_9",
+      "bench-relevance-100t-1783084301-target___database_tool_2",
+      "bench-relevance-100t-1783084301-target___database_tool_3"
+    ],
+    "matching_tools": 0,
+    "total_tools_returned": 10,
+    "precision": 0.0,
+    "hit": false
+  },
+  {
+    "test_name": "Topic shift: deployment \u2192 monitoring",
+    "test_type": "topic_shift",
+    "approach": "llm_intent",
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "text": "Deploy the new version of the auth service"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "text": "Deployed auth-service v2.3.1 to production."
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "text": "How's it looking? Any errors?"
+          }
+        ]
+      }
+    ],
+    "search_query": "The user is deploying a new version of a service and monitoring the deployment for errors.",
+    "expected_categories": [
+      "monitoring"
+    ],
+    "tools_returned": [
+      "bench-relevance-100t-1783084301-target___deployment_tool",
+      "bench-relevance-100t-1783084301-target___deployment_tool_6",
+      "bench-relevance-100t-1783084301-target___deployment_tool_1",
+      "bench-relevance-100t-1783084301-target___deployment_tool_7",
+      "bench-relevance-100t-1783084301-target___deployment_tool_8",
+      "bench-relevance-100t-1783084301-target___deployment_tool_9",
+      "bench-relevance-100t-1783084301-target___deployment_tool_2",
+      "bench-relevance-100t-1783084301-target___deployment_tool_3",
+      "bench-relevance-100t-1783084301-target___deployment_tool_5",
+      "bench-relevance-100t-1783084301-target___deployment_tool_4"
+    ],
+    "matching_tools": 0,
+    "total_tools_returned": 10,
+    "precision": 0.0,
+    "hit": false
+  },
+  {
+    "test_name": "Topic shift: deployment \u2192 monitoring",
+    "test_type": "topic_shift",
+    "approach": "regex_intent",
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "text": "Deploy the new version of the auth service"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "text": "Deployed auth-service v2.3.1 to production."
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "text": "How's it looking? Any errors?"
+          }
+        ]
+      }
+    ],
+    "search_query": "errors",
+    "expected_categories": [
+      "monitoring"
+    ],
+    "tools_returned": [
+      "bench-relevance-100t-1783084301-target___database_tool_8",
+      "bench-relevance-100t-1783084301-target___database_tool_2",
+      "bench-relevance-100t-1783084301-target___database_tool_1",
+      "bench-relevance-100t-1783084301-target___email_tool_8",
+      "bench-relevance-100t-1783084301-target___file_tool_8",
+      "bench-relevance-100t-1783084301-target___database_tool_6",
+      "bench-relevance-100t-1783084301-target___monitoring_tool_8",
+      "bench-relevance-100t-1783084301-target___monitoring_tool_2",
+      "bench-relevance-100t-1783084301-target___email_tool_6",
+      "bench-relevance-100t-1783084301-target___file_tool_6"
+    ],
+    "matching_tools": 2,
+    "total_tools_returned": 10,
+    "precision": 0.2,
+    "hit": true
+  }
+]
